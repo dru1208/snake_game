@@ -6,21 +6,13 @@ class Snake {
     this.segments[0] = this.segments[0]
   }
 
-  move(deathCb) {
+  move() {
     const newSegments = this.segments.map((segment, index) => {
       const prevSegment = index === 0 ? this.segments[0] : this.segments[index - 1]
       const prevDirection = prevSegment.direction
       return segment.move(prevDirection)
     })
-
-    const newHead = newSegments[0]
-    if (newHead && newHead.isAlive()) {
-      this.segments = newSegments
-    } else {
-      console.log("Snake Died")
-      deathCb(this)
-    }
-    // add game ending condition if snake is no longer alive
+    this.segments = newSegments
   }
 
   died() {
