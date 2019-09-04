@@ -1,0 +1,1 @@
+// 2. create a function that we can use to log something after each interval

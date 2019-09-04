@@ -1,0 +1,1 @@
+// 1. create a function that will set up delta time, a ticker that we can use to track game progress
