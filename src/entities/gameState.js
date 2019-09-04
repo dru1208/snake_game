@@ -13,9 +13,15 @@ class GameState {
   }
 
   nextMove(moveCb, endCb) {
-    this.snake.move(endCb(this))
-    moveCb(this.snake, this.food)
-    this.isFoodEaten()
+    if (this.timeout) 
+      return
+
+    this.timeout = setTimeout(() => {
+      this.snake.move(endCb(this))
+      moveCb(this.snake, this.food)
+      this.isFoodEaten()  
+      this.timeout = null
+    }, 700)  
   }
 
   isFoodEaten() {

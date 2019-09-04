@@ -1,4 +1,4 @@
-import { setDeltaTime } from "./deltaTime.js"
+import { setDeltaTime, executeWithFramerate, executeWithWindowAnimationFrame } from "./deltaTime.js"
 import { logSomething } from "./logging.js"
 
-export { setDeltaTime, logSomething }
+export { setDeltaTime, logSomething, executeWithFramerate, executeWithWindowAnimationFrame }
