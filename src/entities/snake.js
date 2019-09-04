@@ -20,7 +20,6 @@ class Snake {
       console.log("Snake Died")
       deathCb(this)
     }
-    // add game ending condition if snake is no longer alive
   }
 
   died() {
